@@ -1,0 +1,5 @@
+﻿:root {
+  --primary: #409EFF;
+}
+body { margin: 0; font-family: 'Microsoft YaHei', sans-serif; }
+a { text-decoration: none; color: var(--primary); }

@@ -1,0 +1,16 @@
+﻿# IDE
+.idea/
+*.iml
+out/
+target/
+
+# Node
+node_modules/
+dist/
+
+# Uploads (dont commit user files)
+uploads/
+
+# OS
+.DS_Store
+Thumbs.db
