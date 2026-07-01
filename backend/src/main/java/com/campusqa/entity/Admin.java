@@ -1,4 +1,4 @@
-﻿package com.campusqa.entity;
+package com.campusqa.entity;
 import java.time.LocalDateTime;
 public class Admin {
     private Long id; private String username; private String password; private LocalDateTime createdAt;

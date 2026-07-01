@@ -1,4 +1,4 @@
-﻿package com.campusqa.controller;
+package com.campusqa.controller;
 
 import com.campusqa.common.*;
 import com.campusqa.entity.*;

@@ -1,4 +1,4 @@
-﻿package com.campusqa.entity;
+package com.campusqa.entity;
 import java.time.LocalDateTime;
 public class Favorite {
     private Long id; private Long userId; private Long questionId; private Long resourceId; private LocalDateTime createdAt;

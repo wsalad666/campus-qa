@@ -1,4 +1,4 @@
-﻿package com.campusqa.common;
+package com.campusqa.common;
 
 public class Result<T> {
     private int code;

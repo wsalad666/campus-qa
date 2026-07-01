@@ -1,4 +1,4 @@
-﻿package com.campusqa.mapper;
+package com.campusqa.mapper;
 import com.campusqa.entity.*;
 import org.apache.ibatis.annotations.*;
 

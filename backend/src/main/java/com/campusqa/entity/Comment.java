@@ -1,4 +1,4 @@
-﻿package com.campusqa.entity;
+package com.campusqa.entity;
 import java.time.LocalDateTime;
 public class Comment {
     private Long id; private Long answerId; private Long userId; private String content; private LocalDateTime createdAt;

@@ -1,4 +1,4 @@
-﻿package com.campusqa.service.impl;
+package com.campusqa.service.impl;
 import com.campusqa.common.*;
 import com.campusqa.entity.*;
 import com.campusqa.mapper.*;

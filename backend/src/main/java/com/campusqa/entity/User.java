@@ -1,4 +1,4 @@
-﻿package com.campusqa.entity;
+package com.campusqa.entity;
 import java.time.LocalDateTime;
 public class User {
     private Long id;
