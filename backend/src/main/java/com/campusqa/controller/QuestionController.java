@@ -9,7 +9,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/questions")
-@Api(tags = "C-问答模块")
+@Api(tags = "问答模块")
 public class QuestionController {
     private final QuestionService questionService;
 

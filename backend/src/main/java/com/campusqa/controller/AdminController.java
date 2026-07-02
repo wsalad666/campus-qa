@@ -9,7 +9,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/admin")
-@Api(tags = "B-后台管理")
+@Api(tags = "后台管理")
 public class AdminController {
     private final AdminService adminService;
 

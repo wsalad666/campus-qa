@@ -10,7 +10,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/user")
-@Api(tags = "B-用户模块")
+@Api(tags = "用户模块")
 public class UserController {
     private final UserService userService;
     private final FavoriteService favoriteService;

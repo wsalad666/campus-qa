@@ -13,7 +13,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/api/resources")
-@Api(tags = "D-资源模块")
+@Api(tags = "资源模块")
 public class ResourceController {
     private final ResourceService resourceService;
 
