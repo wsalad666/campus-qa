@@ -38,15 +38,63 @@ cd campus-qa
 
 ## 2. 初始化数据库
 
+### 第一步：确保 MySQL 在运行
+
+打开一个新终端，输入：
+
 ```bash
+mysql -u root -p123456 -e "SELECT 1"
+```
+
+如果显示 `1` 就说明 MySQL 已启动且密码正确。
+
+如果提示 `mysql 不是内部或外部命令`，说明 MySQL 没加到 PATH。去 `C:\Program Files\MySQL\MySQL Server 8.4\bin\` 目录下打开终端，或者直接用完整路径：
+
+```bash
+"C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe" -u root -p123456 -e "SELECT 1"
+```
+
+如果提示 `Can't connect to MySQL server`，说明 MySQL 服务没启动。以管理员身份打开终端，执行：
+
+```bash
+net start MySQL84
+```
+
+（服务名也可能是 `MySQL` 或 `MySQL80`，用 `services.msc` 查看。）
+
+### 第二步：执行建库脚本
+
+```bash
+cd campus-qa
 mysql -u root -p123456 < database/schema.sql
 ```
 
-执行后自动创建 `campus_qa` 数据库，包含 10 张表和 5 门初始课程。
+> 如果用完整路径：`"C:\Program Files\MySQL\MySQL Server 8.4\bin\mysql.exe" -u root -p123456 < database\schema.sql`
 
-> 密码不是 `123456` 的话，同时修改 `backend/src/main/resources/application.yml` 里的 `spring.datasource.password`。
+### 第三步：验证
 
----
+```bash
+mysql -u root -p123456 -e "USE campus_qa; SHOW TABLES;"
+```
+
+应该看到 10 张表：
+
+```
+admin, answer, comment, course, favorite, follow,
+question, question_like, resource, user
+```
+
+### 如果密码不是 123456
+
+把上面命令里的 `-p123456` 换成你的密码 `-p你的密码`。
+
+**同时修改** `backend/src/main/resources/application.yml` 中的这一行：
+
+```yaml
+spring:
+  datasource:
+    password: 你的密码    # 改这里
+```
 
 ## 3. 启动后端
 
